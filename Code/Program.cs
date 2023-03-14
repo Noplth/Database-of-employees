@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace GlobalProperties
+namespace Database_of_employees.Code
 {
     public class MainMenu
     {
@@ -19,6 +19,8 @@ namespace GlobalProperties
         public static void Main(string[] args)
         {
             MainMenu LetsGo = new MainMenu();
-            LetsGo.Message(); 
+            LetsGo.Message();
         }
     }
+
+}
