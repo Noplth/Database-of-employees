@@ -1,26 +1,60 @@
 ﻿using System;
 
-namespace Database_of_employees.Code
+class Program
 {
-    public class MainMenu
+    static void Main(string[] args)
     {
-        public int NumChange;
-        public void Message()
+        while (true)
         {
-            Console.Write("Виберіть дію яку хочете виконати:\n1: Вибрати нового працівника\n" +
-                "2: Переглянути дані працівника\n" +
-                "3: Редагувати існуючуго працівника\n" +
-                "4: Видалити існуючого працівника \n" +
-                "5: Згенерувати звіт ");
-        }
-    }
-    public class Program
-    {
-        public static void Main(string[] args)
-        {
-            MainMenu LetsGo = new MainMenu();
-            LetsGo.Message();
-        }
-    }
+            Console.WriteLine("Виберіть тип дії:");
+            Console.WriteLine("1 - Ввід даних");
+            Console.WriteLine("2 - Виведення даних");
+            Console.WriteLine("3 - Редагування даних");
+            Console.WriteLine("4 - Видалення даних");
+            Console.WriteLine("5 - Вихід");
 
+            // отримуємо вибір користувача
+            int choice;
+            bool isValidChoice = false;
+            while (!isValidChoice)
+            {
+                Console.Write("Ваш вибір: ");
+                if (int.TryParse(Console.ReadLine(), out choice))
+                {
+                    if (choice >= 1 && choice <= 5)
+                    {
+                        isValidChoice = true;
+                    }
+                    else
+                    {
+                        Console.WriteLine("Неправильний вибір. Спробуйте ще раз.");
+                    }
+                }
+                else
+                {
+                    Console.WriteLine("Неправильний вибір. Спробуйте ще раз.");
+                }
+            }
+
+            // обробка вибору користувача
+            switch (choice)
+            {
+                case 1:
+                    // функціонал для введення даних
+                    break;
+                case 2:
+                    // функціонал для виведення даних
+                    break;
+                case 3:
+                    // функціонал для редагування даних
+                    break;
+                case 4:
+                    // функціонал для видалення даних
+                    break;
+                case 5:
+                    // вихід з програми
+                    return;
+            }
+        }
+    }
 }
