@@ -6,6 +6,7 @@ class Program
     {
         while (true)
         {
+            // друк меню вибору
             Console.WriteLine("Виберіть тип дії:");
             Console.WriteLine("1 - Ввід даних");
             Console.WriteLine("2 - Виведення даних");
@@ -14,14 +15,14 @@ class Program
             Console.WriteLine("5 - Вихід");
 
             // отримуємо вибір користувача
-            int choice;
+            int userChoice;
             bool isValidChoice = false;
             while (!isValidChoice)
             {
                 Console.Write("Ваш вибір: ");
-                if (int.TryParse(Console.ReadLine(), out choice))
+                if (int.TryParse(Console.ReadLine(), out userChoice))
                 {
-                    if (choice >= 1 && choice <= 5)
+                    if (userChoice >= 1 && choice <= 5)
                     {
                         isValidChoice = true;
                     }
@@ -37,7 +38,7 @@ class Program
             }
 
             // обробка вибору користувача
-            switch (choice)
+            switch (userChoice)
             {
                 case 1:
                     // функціонал для введення даних
