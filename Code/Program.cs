@@ -15,14 +15,15 @@ class Program
             Console.WriteLine("5 - Вихід");
 
             // отримуємо вибір користувача
-            int userChoice;
+            int userChoice = 0;
             bool isValidChoice = false;
+
             while (!isValidChoice)
             {
                 Console.Write("Ваш вибір: ");
                 if (int.TryParse(Console.ReadLine(), out userChoice))
                 {
-                    if (userChoice >= 1 && choice <= 5)
+                    if (userChoice >= 1 && userChoice <= 5)
                     {
                         isValidChoice = true;
                     }

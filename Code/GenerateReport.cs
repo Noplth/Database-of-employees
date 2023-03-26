@@ -1,9 +1,10 @@
 using System;
 
 namespace Database_of_employees.Code
-{ 
-class Program {
- static void Main(string[] args)
+{
+    class GenerateReport
+    {
+        public void GenRepo()
         {
             Console.WriteLine("Працівники , які працюють у відділі 'Інформаційний обчислювальний центр(ІОЦ):'");
             Console.WriteLine("____________________________________________________________________________________________________________________________________\n");
@@ -20,5 +21,5 @@ class Program {
             Console.WriteLine("|Місячний оклад | Дата прийняття на роботу | Поле для приміток |\n");
             Console.WriteLine("_______________________________________________________________");
         }
-}
+    }
 }
